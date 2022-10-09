@@ -1,0 +1,18 @@
+.header{
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__nav{
+    display: flex;
+    gap: 57px;
+
+    a{
+      color: var(--mainColor);
+      font-size: 24px;
+      font-weight: 400;
+      position: relative;
+    }
+  }
+}
