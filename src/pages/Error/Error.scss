@@ -1,0 +1,28 @@
+.error-container{
+  width: 100%;
+  text-align: center;
+  color: var(--mainColor);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 100px;
+
+  & div{
+    & span{
+      font-size: 288px;
+      font-weight: 700;
+    }
+
+    & p{
+      font-size: 36px;
+      font-weight: 500;
+    }
+  }
+
+  & a{
+    color: var(--mainColor);
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
