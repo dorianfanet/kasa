@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link, useMatch, useResolvedPath  } from "react-router-dom"
 import logo from "../../assets/logo.svg"
-import './Header.scss'
+import './Header.scss';
 
 export default function Header() {
   return (
@@ -9,9 +9,20 @@ export default function Header() {
         <img src={logo} alt="" />
       </Link>
       <nav className="header__nav">
-        <Link to="/">Accueil</Link>
-        <Link to="/about">À propos</Link>
+        <CustomLink to="/">Accueil</CustomLink>
+        <CustomLink to="/about">À propos</CustomLink>
       </nav>
     </header>
+  )
+}
+
+function CustomLink({ to, children }) {
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+
+  return (
+    <Link to={to} className={isActive ? 'active' : ''}>
+      {children}
+    </Link>
   )
 }

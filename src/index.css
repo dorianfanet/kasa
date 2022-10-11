@@ -1,5 +1,7 @@
 :root{
-  --mainColor: #FF6060
+  --mainColor: #FF6060;
+  --secondaryColor: #F6F6F6;
+  --grey: #E3E3E3
 }
 
 body {
@@ -23,4 +25,26 @@ a{
   width: 100%;
   max-width: 1240px;
   margin: auto;
+}
+
+@media only screen and (max-width: 1340px) {
+  .responsive{
+    width: calc(100% - 100px);
+    margin: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .responsive{
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+}
+
+ul{
+  padding: 0;
+}
+
+li{
+  list-style-type: none;
 }
