@@ -5,11 +5,11 @@ import aboutPicture from "../../assets/about-picture.jpg"
 
 export default function About() {
   return(
-    <section className="about-container responsive">
+    <div className="about-container responsive">
       <figure>
         <img src={aboutPicture} alt="" />
       </figure>
-      <div className="about-container__dropdown-list">
+      <section className="about-container__dropdown-list">
         <ul>
           {aboutData.map(({ title, content }) => 
             <Dropdown
@@ -18,7 +18,7 @@ export default function About() {
             />
           )}
         </ul>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }

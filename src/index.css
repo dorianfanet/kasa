@@ -4,6 +4,15 @@
   --grey: #E3E3E3
 }
 
+div#root{
+  min-height: 100vh;
+  position: relative;
+}
+
+div#root > div{
+  padding-bottom: 250px;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
