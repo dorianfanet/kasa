@@ -44,7 +44,11 @@
 
 @media screen and (max-width: 768px){
   .header{
-    height: 100px;
+    height: 90px;
+
+    &__logo img{
+      height: 47px;
+    }
 
     &__nav{
       gap: 15px;

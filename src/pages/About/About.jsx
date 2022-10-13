@@ -11,10 +11,11 @@ export default function About() {
       </figure>
       <section className="about-container__dropdown-list">
         <ul>
-          {aboutData.map(({ title, content }) => 
+          {aboutData.map(({ title, content, type }) => 
             <Dropdown
               title={title}
               content={content}
+              type='p'
             />
           )}
         </ul>

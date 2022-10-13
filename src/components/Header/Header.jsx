@@ -5,7 +5,7 @@ import "./Header.scss";
 export default function Header() {
   return (
     <header className="header responsive">
-      <Link to="/">
+      <Link to="/" className="header__logo">
         <img
           src={logo}
           alt=""

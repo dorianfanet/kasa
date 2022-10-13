@@ -24,24 +24,24 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  & p{
+  & p, ul{
     background-color: var(--secondaryColor);
     margin: 0;
     padding: 0 18px;
     opacity: 0;
     color: var(--mainColor);
-    font-size: 24px;
+    font-size: 18px;
     transition: all 200ms ease;
     white-space: nowrap;
     text-overflow: clip;
     overflow: hidden;
     border-radius: 10px;
-  }
 
-  p.active{
-    white-space: normal;
-    padding: 38px 18px;
-    opacity: 1;
+    &.active{
+      white-space: normal;
+      padding: 38px 18px;
+      opacity: 1;
+    }
   }
 
   .icon{
@@ -61,7 +61,7 @@
       font-size: 13px;
     }
 
-    & p{
+    & p, ul{
       border-radius: 5px;
       padding: 0 12px;
       font-size: 12px;
