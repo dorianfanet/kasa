@@ -1,9 +1,15 @@
 import aboutData from "../../data/aboutData.json"
 import Dropdown from "../../components/Dropdown/Dropdown"
 import './About.scss'
+import { useEffect } from "react"
 import aboutPicture from "../../assets/about-picture.jpg"
 
 export default function About() {
+
+  useEffect(() => {
+    document.title = `Kasa | À propos`
+  })
+
   return(
     <div className="about-container responsive">
       <figure>

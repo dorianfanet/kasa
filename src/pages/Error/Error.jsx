@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom'
 import './Error.scss'
+import { useEffect } from 'react'
 
 export default function Error() {
+
+  useEffect(() => {
+    document.title = `Kasa | Erreur 404`
+  })
+
   return(
     <div className='error-container responsive'>
       <div>

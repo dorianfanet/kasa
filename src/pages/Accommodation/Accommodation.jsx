@@ -1,8 +1,8 @@
 import {Arrow} from '../../assets/icons/Arrow'
 import data from '../../data/data.json'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import './Accommodation.scss'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { RedStar } from '../../assets/icons/RedStar'
 import { GreyStar } from '../../assets/icons/GreyStar'
 import Dropdown from '../../components/Dropdown/Dropdown'
@@ -17,8 +17,12 @@ export default function Accommodation() {
   const [lightboxState, setLightboxState] = useState(0)
   
   const range = [1, 2, 3, 4, 5]
+
+  useEffect(() => {
+    document.title = accoData ? `Kasa | ${accoData.title}` : 'Kasa | Logement introuvable'
+  })
   
-  return(
+  return accoData ? (
     <div className="responsive">
       <figure className='acco-lightbox'>
         {accoData.pictures.length > 1 ? (
@@ -76,6 +80,11 @@ export default function Accommodation() {
           />
         </div>
       </section>
+    </div>
+  ) : (
+    <div className='acco-error responsive'>
+      <p>Le logement que vous essayez de consulter n'existe pas ou plus</p>
+      <Link to="/">Retourner sur la page d'accueil</Link>
     </div>
   )
 }

@@ -196,3 +196,25 @@
     }
   }
 }
+
+.acco-error{
+  width: 100%;
+  text-align: center;
+  height: calc(100vh - 500px);
+  display: grid;
+  place-content: center;
+  gap: 80px;
+  padding: 100px 0 0 0;
+  color: var(--mainColor);
+  font-weight: 500;
+
+  & p{
+    font-size: 36px;
+  }
+
+  & a{
+    color: var(--mainColor);
+    text-decoration: underline;
+    font-size: 18px;
+  }
+}
