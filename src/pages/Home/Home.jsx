@@ -7,7 +7,7 @@ import AccommodationCard from "../../components/AccommodationCard/AccommodationC
 export default function Home() {
 
   useEffect(() => {
-    document.title = `Kasa | Home`
+    document.title = `Kasa | Accueil`
   })
 
   return (

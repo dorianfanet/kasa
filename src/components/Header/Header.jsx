@@ -1,15 +1,13 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import { Logo } from '../Logo'
 import "./Header.scss";
 
 export default function Header() {
   return (
     <header className="header responsive">
       <Link to="/" className="header__logo">
-        <img
-          src={logo}
-          alt=""
-        />
+        <Logo />
       </Link>
       <nav className="header__nav">
         <NavLink to="/">Accueil</NavLink>
