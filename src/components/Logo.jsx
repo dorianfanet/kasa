@@ -51,7 +51,6 @@ export function Logo() {
   
   async function unload () { // We need to wrap the loop into an async function for this to work
     for (let i = houses.length; i > 0; i--) {
-      console.log(i)
       setHouseState(i - 1)
       await timer(30 - i*(0.3*i)); // then the created Promise can be awaited
     }

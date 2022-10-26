@@ -1,5 +1,5 @@
 import aboutData from "../../data/aboutData.json"
-import Dropdown from "../../components/Dropdown/Dropdown"
+import Dropdown from "../../components/Collapse/Collapse"
 import './About.scss'
 import { useEffect } from "react"
 import aboutPicture from "../../assets/about-picture.jpg"
@@ -19,6 +19,7 @@ export default function About() {
         <ul>
           {aboutData.map(({ title, content, type }) => 
             <Dropdown
+              key={title}
               title={title}
               content={content}
               type='p'

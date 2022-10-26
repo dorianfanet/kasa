@@ -1,15 +1,15 @@
-import './Dropdown.scss'
+import './Collapse.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
-export default function Dropdown({ title, content, type }) {
+export default function Collapse({ title, content, type }) {
 
   const [open, setOpen] = useState(false)
 
 
   return(
-    <li className={open ? 'dropdown active' : 'dropdown'}>
+    <li className={open ? 'collapse active' : 'collapse'}>
       <button onClick={() => setOpen(!open)}>
         {title}
         <FontAwesomeIcon className={open ? 'icon open' : 'icon'} icon={faChevronDown} />
@@ -18,8 +18,8 @@ export default function Dropdown({ title, content, type }) {
         <p className={open ? 'active' : ''}>{content}</p>
       ) : (
         <ul className={open ? 'active' : ''}>
-          {content.map((e) =>
-            <li>{e}</li>
+          {content.map((e, i) =>
+            <li key={i}>{e}</li>
           )}
         </ul>
       )}
